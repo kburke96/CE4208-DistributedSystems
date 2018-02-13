@@ -7,7 +7,11 @@ package socketserver;
 
 /**
  *
- * @author james.murphy
+ * @author Kevin Burke
+ * Date: 13/02/18
+ * This file is adapted from the original SocketServer.java file
+ * It also includes elements from the threaded_server.java file
+ * Both available on Sulis.ul.ie (Author James Murphy)
  */
 
 import java.awt.Color;
