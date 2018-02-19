@@ -45,27 +45,38 @@ public class MySQLAccess {
       preparedStatement.setString(6, "TestComment");
       preparedStatement.executeUpdate();
       
+      //Add new scanner object so user can input info
       Scanner scanner = new Scanner(System.in);
       
       preparedStatement2 = connect.prepareStatement("insert into FEEDBACK.COMMENTS values (default, ?, ?, ?, ? , ?, ?)");
+      
+      //Ask user for input and take next item given
+      //set the string at index 1 (first ?) in preparedStatement2 to the
+      //specified value
       System.out.println("Please enter a username to input to database: ");
       String inputName = scanner.next();
       preparedStatement2.setString(1, inputName);
       
+      
+      //Set index 2 (second ?) to value
       System.out.println("Please enter an email to input to database: ");
       String inputEmail = scanner.next();
       preparedStatement2.setString(2, inputEmail);
       
+      //set index 3 (third ?) to value
       System.out.println("Please enter a webpage to input to database: ");
       String inputWebpage = scanner.next();
       preparedStatement2.setString(3, inputWebpage);
       
+      //set index 4 (fourth ?) to some date
       preparedStatement2.setDate(4, new java.sql.Date(2009, 12, 11));
       
+      //set index 5 (fifth ?) to value
       System.out.println("Please enter a summary to input to database: ");
       String inputSummary = scanner.next();
       preparedStatement2.setString(5, inputSummary);
       
+      //set index 6 (sixth?) to value
       System.out.println("Please enter a comment to input to database: ");
       String inputComment = scanner.next();
       preparedStatement2.setString(6, inputComment);
