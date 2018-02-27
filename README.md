@@ -11,3 +11,10 @@ Week 3 Lab branch :-
 
 -> MySQL basics (creating db's, inserting into tables, deleting, dump files etc.)
 -> JDBC usage within Java files to allow access to MySQL DBs
+
+Week 5 Lab branch :-
+
+-> Basic Interface for TicTacToe game.
+-> Includes login, register and games list screens. 
+-> Communicates with the mysql db 
+-> User navigates through these to get to game screen
