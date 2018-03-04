@@ -51,18 +51,9 @@ public class DatabaseComms {
                     orPass = resultSet.getString("password");
                     if (orPass.equals(pass)) {
                         return true;
-                    } else {
-                        return false;
                     }
                 } //end while
-                //if (orPass.equals(pass)) {
-                    //do something
-//                    return true;
-                    //resultSet.close();
-//                } else {
-                    //do something
-//                    return false;
-//                }
+                return false;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -94,7 +85,7 @@ public class DatabaseComms {
     
     protected ArrayList<Integer> getOpenGames() {
         try {
-            preparedStatement = connect.prepareStatement("SELECT autoID FROM week4.GAMES where p1 = '' or p2 = ''");
+            preparedStatement = connect.prepareStatement("SELECT autoID FROM week4.GAMES where gameState = '-1'");
             resultSet = preparedStatement.executeQuery();
             
             
