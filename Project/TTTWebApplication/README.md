@@ -1,0 +1,3 @@
+The zip file in this folder contains the Web service necessary to run the TicTacToe database and game. 
+The zip file should be imported to Netbeans via File > Import Project > From Zip...
+Once the project has been imported, Clean and Build and then Deploy to run the server on localhost port 8080.
